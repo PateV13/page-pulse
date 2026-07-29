@@ -7,16 +7,19 @@ public class AnalyzeResponse {
     private String title;
     private int statusCode;
     private long responseTime;
+    private String metaDescription;
 
     public AnalyzeResponse() {
     }
 
-    public AnalyzeResponse(String message, String url, String title, int statusCode, long responseTime) {
-        this.message = message;
-        this.url = url;
-        this.title = title;
-        this.statusCode = statusCode;
-        this.responseTime = responseTime;
+    public AnalyzeResponse(String message, String url, String title, String metaDescription,
+                       int statusCode, long responseTime) {
+    this.message = message;
+    this.url = url;
+    this.title = title;
+    this.metaDescription = metaDescription;
+    this.statusCode = statusCode;
+    this.responseTime = responseTime;
     }
 
     public String getMessage() {
@@ -57,6 +60,14 @@ public class AnalyzeResponse {
 
     public void setResponseTime(long responseTime) {
         this.responseTime = responseTime;
+    }
+
+    public String getMetaDescription() {
+        return metaDescription;
+    }
+
+    public void setMetaDescription(String metaDescription) {
+        this.metaDescription = metaDescription;
     }
 
 }

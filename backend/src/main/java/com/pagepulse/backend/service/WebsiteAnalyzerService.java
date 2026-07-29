@@ -23,9 +23,13 @@ public class WebsiteAnalyzerService {
 
     String title = document.title();
 
+    String metaDescription = document
+            .select("meta[name=description]")
+            .attr("content");
+
     int statusCode = response.statusCode();
 
-    return new WebsiteAnalysisResult(title, statusCode, responseTime);
+    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime);
 }
 
 }

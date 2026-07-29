@@ -27,6 +27,7 @@ public AnalyzeResponse analyzeWebsite(@RequestBody AnalyzeRequest request) throw
             "Success",
             request.getUrl(),
             result.getTitle(),
+            result.getMetaDescription(),
             result.getStatusCode(),
             result.getResponseTime()
     );
