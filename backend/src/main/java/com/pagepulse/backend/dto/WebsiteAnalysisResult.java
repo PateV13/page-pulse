@@ -4,13 +4,15 @@ public class WebsiteAnalysisResult {
 
     private String title;
     private int statusCode;
+    private long responseTime;
 
     public WebsiteAnalysisResult() {
     }
 
-    public WebsiteAnalysisResult(String title, int statusCode) {
+    public WebsiteAnalysisResult(String title, int statusCode, long responseTime) {
         this.title = title;
         this.statusCode = statusCode;
+        this.responseTime = responseTime;
     }
 
     public String getTitle() {
@@ -28,4 +30,13 @@ public class WebsiteAnalysisResult {
     public void setStatusCode(int statusCode) {
         this.statusCode = statusCode;
     }
+
+    public long getResponseTime() {
+        return responseTime;
+    }
+
+    public void setResponseTime(long responseTime) {
+        this.responseTime = responseTime;
+    }
+
 }

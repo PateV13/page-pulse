@@ -6,15 +6,17 @@ public class AnalyzeResponse {
     private String url;
     private String title;
     private int statusCode;
+    private long responseTime;
 
     public AnalyzeResponse() {
     }
 
-    public AnalyzeResponse(String message, String url, String title, int statusCode) {
+    public AnalyzeResponse(String message, String url, String title, int statusCode, long responseTime) {
         this.message = message;
         this.url = url;
         this.title = title;
         this.statusCode = statusCode;
+        this.responseTime = responseTime;
     }
 
     public String getMessage() {
@@ -47,6 +49,14 @@ public class AnalyzeResponse {
 
     public void setStatusCode(int statusCode) {
         this.statusCode = statusCode;
+    }
+
+    public long getResponseTime() {
+        return responseTime;
+    }
+
+    public void setResponseTime(long responseTime) {
+        this.responseTime = responseTime;
     }
 
 }

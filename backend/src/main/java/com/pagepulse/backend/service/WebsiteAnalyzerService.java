@@ -11,7 +11,13 @@ public class WebsiteAnalyzerService {
 
     public WebsiteAnalysisResult analyzeWebsite(String url) throws Exception {
 
+    long startTime = System.currentTimeMillis();
+
     Connection.Response response = Jsoup.connect(url).execute();
+
+    long endTime = System.currentTimeMillis();
+
+    long responseTime = endTime - startTime;
 
     Document document = response.parse();
 
@@ -19,6 +25,7 @@ public class WebsiteAnalyzerService {
 
     int statusCode = response.statusCode();
 
-    return new WebsiteAnalysisResult(title, statusCode);
+    return new WebsiteAnalysisResult(title, statusCode, responseTime);
 }
+
 }
