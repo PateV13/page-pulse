@@ -27,9 +27,11 @@ public class WebsiteAnalyzerService {
             .select("meta[name=description]")
             .attr("content");
 
+    int h1Count = document.select("h1").size();
+
     int statusCode = response.statusCode();
 
-    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime);
+    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime, h1Count);
 }
 
 }

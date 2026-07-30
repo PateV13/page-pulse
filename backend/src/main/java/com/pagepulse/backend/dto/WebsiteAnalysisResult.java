@@ -6,15 +6,17 @@ public class WebsiteAnalysisResult {
     private int statusCode;
     private long responseTime;
     private String metaDescription;
+    private int h1Count;
 
     public WebsiteAnalysisResult() {
     }
 
-    public WebsiteAnalysisResult(String title, String metaDescription, int statusCode, long responseTime) {
+    public WebsiteAnalysisResult(String title, String metaDescription, int statusCode, long responseTime, int h1Count) {
         this.title = title;
         this.metaDescription = metaDescription;
         this.statusCode = statusCode;
         this.responseTime = responseTime;
+        this.h1Count = h1Count;
     }
 
     public String getTitle() {
@@ -47,6 +49,14 @@ public class WebsiteAnalysisResult {
 
     public void setMetaDescription(String metaDescription) {
         this.metaDescription = metaDescription;
+    }
+
+    public int getH1Count(){
+        return h1Count;
+    }
+
+    public void setH1Count(int h1Count){
+        this.h1Count = h1Count;
     }
 
 }
