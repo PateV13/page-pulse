@@ -10,12 +10,15 @@ public class AnalyzeResponse {
     private String metaDescription;
     private int h1Count;
     private int wordCount;
+    private int totalImages;
+    private int imagesWithoutAlt;
+    private int imagesWithEmptyAlt;
 
     public AnalyzeResponse() {
     }
 
     public AnalyzeResponse(String message, String url, String title, String metaDescription,
-                       int statusCode, long responseTime, int h1Count, int wordCount) {
+                       int statusCode, long responseTime, int h1Count, int wordCount, int totalImages, int imagesWithoutAlt, int imagesWithEmptyAlt) {
     this.message = message;
     this.url = url;
     this.title = title;
@@ -24,6 +27,9 @@ public class AnalyzeResponse {
     this.responseTime = responseTime;
     this.h1Count = h1Count;
     this.wordCount = wordCount;
+    this.totalImages = totalImages;
+    this.imagesWithoutAlt = imagesWithoutAlt;
+    this.imagesWithEmptyAlt = imagesWithEmptyAlt;
     }
 
     public String getMessage() {
@@ -88,6 +94,30 @@ public class AnalyzeResponse {
 
     public void setWordCount(int wordCount){
         this.wordCount = wordCount;
+    }
+
+    public int getTotalImages(){
+        return totalImages;
+    }
+
+    public void setTotalImages(int totalImages){
+        this.totalImages=totalImages;
+    }
+
+    public int getImagesWithoutAlt(){
+        return imagesWithoutAlt;
+    }
+
+    public void setImagesWithoutAlt(int imagesWithoutAlt){
+        this.imagesWithoutAlt=imagesWithoutAlt;
+    }
+
+    public int getImagesWithEmptyAlt(){
+        return imagesWithEmptyAlt;
+    }
+
+    public void setImagesWithEmptyAlt(int imagesWithEmptyAlt){
+        this.imagesWithEmptyAlt = imagesWithEmptyAlt;
     }
 
 }

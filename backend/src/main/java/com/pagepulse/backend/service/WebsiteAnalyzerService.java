@@ -33,11 +33,17 @@ public class WebsiteAnalyzerService {
 
     String text = document.text().trim();
 
-    String[] words = text.split("\\s+");
+    String[] words = text.split("\\s+"); // \\s+ used to remove a gap between 2 words so easy to count.
 
     int wordCount = words.length;
 
-    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime, h1Count, wordCount);
+    int totalImages = document.select("img").size(); // total images.
+
+    int imagesWithoutAlt = document.select("img:not([alt])").size(); // images without alt
+
+    int imagesWithEmptyAlt = document.select("img[alt='']").size(); // images with empty alt
+
+    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime, h1Count, wordCount, totalImages, imagesWithoutAlt, imagesWithEmptyAlt);
 }
 
 }

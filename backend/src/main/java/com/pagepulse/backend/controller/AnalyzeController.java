@@ -31,7 +31,10 @@ public AnalyzeResponse analyzeWebsite(@RequestBody AnalyzeRequest request) throw
             result.getStatusCode(),
             result.getResponseTime(),
             result.getH1Count(),
-            result.getWordCount()
+            result.getWordCount(),
+            result.getTotalImages(),
+            result.getImagesWithoutAlt(),
+            result.getImagesWithEmptyAlt()
     );
 }
 

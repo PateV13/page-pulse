@@ -8,17 +8,23 @@ public class WebsiteAnalysisResult {
     private String metaDescription;
     private int h1Count;
     private int wordCount;
+    private int totalImages;
+    private int imagesWithoutAlt;
+    private int imagesWithEmptyAlt;
 
     public WebsiteAnalysisResult() {
     }
 
-    public WebsiteAnalysisResult(String title, String metaDescription, int statusCode, long responseTime, int h1Count, int wordCount) {
+    public WebsiteAnalysisResult(String title, String metaDescription, int statusCode, long responseTime, int h1Count, int wordCount, int totalImages, int imagesWithoutAlt, int imagesWithEmptyAlt) {
         this.title = title;
         this.metaDescription = metaDescription;
         this.statusCode = statusCode;
         this.responseTime = responseTime;
         this.h1Count = h1Count;
         this.wordCount = wordCount;
+        this.totalImages= totalImages;
+        this.imagesWithoutAlt=imagesWithoutAlt;
+        this.imagesWithEmptyAlt=imagesWithEmptyAlt;
     }
 
     public String getTitle() {
@@ -67,6 +73,30 @@ public class WebsiteAnalysisResult {
 
     public void setWordCount(int wordCount){
         this.wordCount = wordCount;
+    }
+
+    public int getTotalImages(){
+        return totalImages;
+    }
+
+    public void setTotalImages(int totalImages){
+        this.totalImages=totalImages;
+    }
+
+    public int getImagesWithoutAlt(){
+        return imagesWithoutAlt;
+    }
+
+    public void setImagesWithoutAlt(int imagesWithoutAlt){
+        this.imagesWithoutAlt=imagesWithoutAlt;
+    }
+
+    public int getImagesWithEmptyAlt(){
+        return imagesWithEmptyAlt;
+    }
+
+    public void setImagesWithEmptyAlt(int imagesWithEmptyAlt){
+        this.imagesWithEmptyAlt = imagesWithEmptyAlt;
     }
 
 }
