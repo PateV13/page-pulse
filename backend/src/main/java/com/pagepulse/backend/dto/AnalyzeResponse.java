@@ -9,12 +9,13 @@ public class AnalyzeResponse {
     private long responseTime;
     private String metaDescription;
     private int h1Count;
+    private int wordCount;
 
     public AnalyzeResponse() {
     }
 
     public AnalyzeResponse(String message, String url, String title, String metaDescription,
-                       int statusCode, long responseTime, int h1Count) {
+                       int statusCode, long responseTime, int h1Count, int wordCount) {
     this.message = message;
     this.url = url;
     this.title = title;
@@ -22,6 +23,7 @@ public class AnalyzeResponse {
     this.statusCode = statusCode;
     this.responseTime = responseTime;
     this.h1Count = h1Count;
+    this.wordCount = wordCount;
     }
 
     public String getMessage() {
@@ -78,6 +80,14 @@ public class AnalyzeResponse {
 
     public void setH1Count(int h1Count){
         this.h1Count = h1Count;
+    }
+
+    public int getWordCount(){
+        return wordCount;
+    }
+
+    public void setWordCount(int wordCount){
+        this.wordCount = wordCount;
     }
 
 }

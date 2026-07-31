@@ -7,16 +7,18 @@ public class WebsiteAnalysisResult {
     private long responseTime;
     private String metaDescription;
     private int h1Count;
+    private int wordCount;
 
     public WebsiteAnalysisResult() {
     }
 
-    public WebsiteAnalysisResult(String title, String metaDescription, int statusCode, long responseTime, int h1Count) {
+    public WebsiteAnalysisResult(String title, String metaDescription, int statusCode, long responseTime, int h1Count, int wordCount) {
         this.title = title;
         this.metaDescription = metaDescription;
         this.statusCode = statusCode;
         this.responseTime = responseTime;
         this.h1Count = h1Count;
+        this.wordCount = wordCount;
     }
 
     public String getTitle() {
@@ -57,6 +59,14 @@ public class WebsiteAnalysisResult {
 
     public void setH1Count(int h1Count){
         this.h1Count = h1Count;
+    }
+
+    public int getWordCount(){
+        return wordCount;
+    }
+
+    public void setWordCount(int wordCount){
+        this.wordCount = wordCount;
     }
 
 }

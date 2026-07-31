@@ -30,7 +30,8 @@ public AnalyzeResponse analyzeWebsite(@RequestBody AnalyzeRequest request) throw
             result.getMetaDescription(),
             result.getStatusCode(),
             result.getResponseTime(),
-            result.getH1Count()
+            result.getH1Count(),
+            result.getWordCount()
     );
 }
 

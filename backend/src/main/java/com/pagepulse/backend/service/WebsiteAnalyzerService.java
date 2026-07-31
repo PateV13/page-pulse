@@ -31,7 +31,13 @@ public class WebsiteAnalyzerService {
 
     int statusCode = response.statusCode();
 
-    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime, h1Count);
+    String text = document.text().trim();
+
+    String[] words = text.split("\\s+");
+
+    int wordCount = words.length;
+
+    return new WebsiteAnalysisResult(title,  metaDescription, statusCode, responseTime, h1Count, wordCount);
 }
 
 }
