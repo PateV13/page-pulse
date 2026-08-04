@@ -120,4 +120,5 @@ public class AnalyzeResponse {
         this.imagesWithEmptyAlt = imagesWithEmptyAlt;
     }
 
+
 }
